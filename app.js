@@ -11,10 +11,17 @@ const {
   AzureKeyCredential,
 } = require('@azure/ai-form-recognizer');
 
+
+
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.get('/', (req, res) => {
+  res.send('<h1>Node.js OCR - Azure Form Recognizer Receipt</h1>');
+  console.log('Get chamado e server no Ar')
+});
 
 const hostname = 'http://localhost';
 
@@ -23,12 +30,7 @@ app.set('port', port);
 
 const server = http.createServer(app);
 server.listen(port, () => {
-  console.log(`Serve rodando porta ${port}`);
-});
-
-app.get('/', (req, res) => {
-  st;
-  res.send('<h1>Node.js OCR - Azure Form Recognizer Receipt</h1>');
+  console.log(`Server rodando porta ${port}`);
 });
 
 // enable files upload
