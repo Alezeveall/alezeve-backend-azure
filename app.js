@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
-  res.send('<h1>Node.js OCR - Azure Form Recognizer Receipt</h1>');
+  res.send('<h1>Node.js OCR - API Azure Form Recognizer para Recibos</h1>');
   console.log('Get chamado e server no Ar')
 });
 
